@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Hello, World!</title>
+      <link href="css/style.css" type="text/css" rel="stylesheet">
+      <script src="scripts/script.js"></script>
+    </head>
+    <body>
+      <h1>Guess The Number!!!</h1>
+      <br>
+      <div class="gridContainer">
+        <div class="leftSide">
+          <div class="top">
+            <input type="text" id="inputGuess" value="Guess Here" class="textBox">
+            <br>
+            <button onclick="guessFunction()" id="guessBtn" class="guessBtn">Click to Make Guess!</button>
+          </div>
+          <br>
+          <div class="mid">
+            <p id="answer" class="answer"></p>
+            <p id="correctAnswer" class="correctAnswer"></p>
+            <p id="retry">Click Start to begin!</p>
+            <h2 id="life">Lives: 6</h2>
+            <h2 id="score">Score: 0</h2>
+          </div>
+        </div>
+        <div class="rightSide">
+          <div class="options">
+            <h3 class="selectOptions">Select Options</h3>
+            <div>
+              <p>Minimum Value:
+                <input type="text" class="inputMin" id="inputMin" value="1">
+              </p>
+            </div>
+            <div>
+              <p>Maximum Value:
+                <input type="text" class="inputMax" id="inputMax" value="100">
+              </p>
+            </div>
+            <div>
+              <p>Lives:
+                <input type="text" class="inputLives" id="inputLives" value="6">
+              </p>
+            </div>
+            <div>
+              <p>Score Up:
+                <input type="text" class="inputScoreUp" id="inputScoreUp" value="1"> 
+              </p>
+            </div>
+            <div>
+              <p>Score Down:
+                <input type="text" class="inputScoreDown" id="inputScoreDown" value="1">
+            </div>
+          </div>
+          <br><br>
+          <div class="restart">
+            <button onclick="restartFunction()" id="restartBtn" class="restartBtn">Start</button>
+          </div>
+          <br><br><br>
+        </div>
+      </div>
+      <div class="quitDiv">
+        <button onclick="quitFunction()" class="quit">Quit</button>
+      </div>
+    </body>
+  </html>

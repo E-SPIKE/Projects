@@ -1,0 +1,26 @@
+{
+  "name": "GuessTheNumber",
+  "version": "1.0.0",
+  "description": "Number Guessing Game",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Ian Edwards",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^7.1.6",
+    "electron-builder": "^21.2.0"
+  },
+  "build": {
+    "appId": "com.electron.Project2",
+    "mac": {
+      "category": "productivity"
+    }
+  }
+}

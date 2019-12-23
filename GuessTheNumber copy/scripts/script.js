@@ -1,3 +1,7 @@
+//Guess history feature
+
+
+//variables
 var min = 1;
 var max = 100;
 var randInt;
@@ -9,8 +13,21 @@ var scoreLose = 2;
 var response;
 
 var guess;
+var inputGuess;
 
 var first = true;
+
+//listener
+
+window.onkeypress = function(event) {
+    if (event.keyCode == 13) {
+       guessFunction();
+       var guessBox = document.getElementById("inputGuess");
+       guessBox.select();
+    }
+ }
+
+//functions
 
 function quitFunction() {
     window.close();
@@ -19,7 +36,16 @@ function quitFunction() {
 function randIntGenerate() {
     min = Math.ceil(min);
     max = Math.floor(max);
-    randInt = Math.floor(Math.random() * (max - min + 1)) + min;
+    var i = 1;
+    var randomInts = 0;
+    while (i < 5){
+        randomInts = randomInts + Math.random();
+        //alert(randomInts);
+        i++;
+    }
+    var randomNumber = randomInts / 4;
+    //alert(randomNumber);
+    randInt = Math.floor(randomNumber * (max - min + 1)) + min;
     //alert(randInt);
     return randInt;
 }
@@ -46,7 +72,7 @@ function guessFunction() {
     var dead = "Whoops, you're out of lives...";
     var correct = "You guessed the correct answer!!!";
     response = "";
-    var inputGuess = document.getElementById("inputGuess").value;
+    inputGuess = document.getElementById("inputGuess").value;
     guess =  parseInt(inputGuess, 10);
     compare(guess);
     hp.toString();
@@ -62,7 +88,6 @@ function guessFunction() {
     } else if (response != dead) {
         document.getElementById("retry").innerHTML = "";
     }
-    
 }
 
 function restartFunction() {

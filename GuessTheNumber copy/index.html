@@ -2,17 +2,17 @@
   <html>
     <head>
       <meta charset="UTF-8">
-      <title>Hello, World!</title>
+      <title>Guess The Number</title>
       <link href="css/style.css" type="text/css" rel="stylesheet">
       <script src="scripts/script.js"></script>
     </head>
     <body>
-      <h1>Guess The Number!!!</h1>
+      <h1>Guess The Number!</h1>
       <br>
       <div class="gridContainer">
         <div class="leftSide">
           <div class="top">
-            <input type="text" id="inputGuess" value="Guess Here" class="textBox">
+            <input type="text" id="inputGuess" value="Guess Here" class="textBox" onclick="this.select()">
             <br>
             <button onclick="guessFunction()" id="guessBtn" class="guessBtn">Click to Make Guess!</button>
           </div>
